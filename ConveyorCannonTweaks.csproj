@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AssemblyName>ConfigurableCannons</AssemblyName>
+    <RootNamespace>MineMogul.ConveyorCannonTweaks</RootNamespace>
+    <MineMogulRoot>F:\SteamLibrary\steamapps\common\MineMogul</MineMogulRoot>
+    <MineMogulManaged>$(MineMogulRoot)\MineMogul_Data\Managed</MineMogulManaged>
+    <MineMogulBepInExCore>$(MineMogulRoot)\BepInEx\core</MineMogulBepInExCore>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="BepInEx">
+      <HintPath>$(MineMogulBepInExCore)\BepInEx.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="0Harmony">
+      <HintPath>$(MineMogulBepInExCore)\0Harmony.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Assembly-CSharp">
+      <HintPath>$(MineMogulManaged)\Assembly-CSharp.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>$(MineMogulManaged)\UnityEngine.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>$(MineMogulManaged)\UnityEngine.CoreModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>$(MineMogulManaged)\UnityEngine.PhysicsModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.InputLegacyModule">
+      <HintPath>$(MineMogulManaged)\UnityEngine.InputLegacyModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>$(MineMogulManaged)\UnityEngine.UI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>$(MineMogulManaged)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>$(MineMogulManaged)\UnityEngine.UIModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>$(MineMogulManaged)\UnityEngine.AssetBundleModule.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="ConveyorCannonTweaksUI\**\*.cs" />
+    <EmbeddedResource Remove="ConveyorCannonTweaksUI\**\*" />
+    <None Remove="ConveyorCannonTweaksUI\**\*" />
+
+    <Compile Remove="NewShopUI\**\*.cs" />
+    <EmbeddedResource Remove="NewShopUI\**\*" />
+    <None Remove="NewShopUI\**\*" />
+
+    <Compile Remove="UnityUiPreview\**\*.cs" />
+    <EmbeddedResource Remove="UnityUiPreview\**\*" />
+    <None Remove="UnityUiPreview\**\*" />
+  </ItemGroup>
+</Project>
