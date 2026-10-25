@@ -5,54 +5,58 @@
     <Nullable>disable</Nullable>
     <AssemblyName>ConfigurableCannons</AssemblyName>
     <RootNamespace>MineMogul.ConveyorCannonTweaks</RootNamespace>
-    <MineMogulRoot>F:\SteamLibrary\steamapps\common\MineMogul</MineMogulRoot>
-    <MineMogulManaged>$(MineMogulRoot)\MineMogul_Data\Managed</MineMogulManaged>
-    <MineMogulBepInExCore>$(MineMogulRoot)\BepInEx\core</MineMogulBepInExCore>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <MineMogulDir Condition="'$(MineMogulDir)' == ''">F:\SteamLibrary\steamapps\common\MineMogul</MineMogulDir>
+    <MineMogulManagedDir>$(MineMogulDir)\MineMogul_Data\Managed</MineMogulManagedDir>
+    <MineMogulBepInExCoreDir>$(MineMogulDir)\BepInEx\core</MineMogulBepInExCoreDir>
+    <MineMogulPluginsDir>$(MineMogulDir)\BepInEx\plugins</MineMogulPluginsDir>
   </PropertyGroup>
 
   <ItemGroup>
     <Reference Include="BepInEx">
-      <HintPath>$(MineMogulBepInExCore)\BepInEx.dll</HintPath>
+      <HintPath>$(MineMogulBepInExCoreDir)\BepInEx.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="0Harmony">
-      <HintPath>$(MineMogulBepInExCore)\0Harmony.dll</HintPath>
+      <HintPath>$(MineMogulBepInExCoreDir)\0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="Assembly-CSharp">
-      <HintPath>$(MineMogulManaged)\Assembly-CSharp.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\Assembly-CSharp.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine">
-      <HintPath>$(MineMogulManaged)\UnityEngine.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\UnityEngine.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.CoreModule">
-      <HintPath>$(MineMogulManaged)\UnityEngine.CoreModule.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\UnityEngine.CoreModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.PhysicsModule">
-      <HintPath>$(MineMogulManaged)\UnityEngine.PhysicsModule.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\UnityEngine.PhysicsModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>$(MineMogulManaged)\UnityEngine.InputLegacyModule.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\UnityEngine.InputLegacyModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>$(MineMogulManaged)\UnityEngine.UI.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\UnityEngine.UI.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>$(MineMogulManaged)\UnityEngine.TextRenderingModule.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\UnityEngine.TextRenderingModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.UIModule">
-      <HintPath>$(MineMogulManaged)\UnityEngine.UIModule.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\UnityEngine.UIModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="UnityEngine.AssetBundleModule">
-      <HintPath>$(MineMogulManaged)\UnityEngine.AssetBundleModule.dll</HintPath>
+      <HintPath>$(MineMogulManagedDir)\UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>

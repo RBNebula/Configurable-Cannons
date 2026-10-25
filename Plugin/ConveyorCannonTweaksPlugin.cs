@@ -15,7 +15,7 @@ namespace MineMogul.ConveyorCannonTweaks
             _runtime = new ConveyorCannonTweaksRuntimeController(Config, Logger);
             ConveyorCannonTweaksRuntime.Set(_runtime);
 
-            _harmony = new Harmony(ModInfo.PluginGuid);
+            _harmony = new Harmony(ModInfo.HARMONY_ID);
             _harmony.PatchAll(typeof(ConveyorCannonTweaksPlugin).Assembly);
 
             _runtime.Initialize();

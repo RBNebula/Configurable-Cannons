@@ -5,9 +5,20 @@ namespace MineMogul.ConveyorCannonTweaks
 {
     internal static class ModInfo
     {
-        internal const string PluginGuid = "com.configurablecannons";
-        internal const string PluginName = "ConfigurableCannons";
-        internal const string PluginVersion = "1.0.0";
+        public const string PLUGIN_GUID = "com.configurablecannons";
+        public const string PLUGIN_NAME = "ConfigurableCannons";
+        public const string PLUGIN_VERSION = "1.0.0";
+        public const string ASSEMBLY_VERSION = "1.0.0";
+        public const string FILE_VERSION = "1.0.0";
+        public const string INFORMATIONAL_VERSION = "1.0.0";
+        public const string HARMONY_ID = PLUGIN_GUID;
+        public const string LOG_PREFIX = "[ConfigurableCannons]";
+        public const string DISPLAY_NAME_SHORT = "ConfigurableCannons";
+        public const string DISPLAY_NAME_LONG = "Configurable Cannons";
+
+        internal const string PluginGuid = PLUGIN_GUID;
+        internal const string PluginName = PLUGIN_NAME;
+        internal const string PluginVersion = PLUGIN_VERSION;
 
         internal const string RebindPluginGuid = "com.rebind";
         internal const string RebindApiTypeName = "Rebind.RebindApi";
